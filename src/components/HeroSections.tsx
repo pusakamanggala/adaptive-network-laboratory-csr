@@ -5,8 +5,8 @@ import TeamIcon from "../icons/three-user.svg";
 
 export const HeroSection = () => {
   return (
-    <section className="mx-16 hero-section 2xl:mx-72 xl:mx-48 lg:mx-32 space-y-14">
-      <div className="grid items-center pt-32 md:grid-cols-2 gap-7 md:py-40 h-[100dvh] 2xl:h-auto">
+    <section className="container p-5 mx-auto hero-section">
+      <div className="grid items-center pt-28 md:grid-cols-2 gap-7 md:py-40 pb-10 lg:h-[100dvh] 2xl:h-auto">
         <div className="flex items-center justify-center">
           <img src={AxoHaloImg} alt="" className="w-[550px] h-auto" />
         </div>
