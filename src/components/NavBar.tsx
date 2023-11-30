@@ -29,7 +29,7 @@ export const NavBar = () => {
       <div className="min-[1080px]:flex min-[1080px]:justify-between px-4">
         <div className="flex items-center justify-between min-[1080px]:block">
           <div className="flex items-center gap-2">
-            <img src={ANLogo} alt="" className="md:h-16 h-10 aspect-square" />
+            <img src={ANLogo} alt="" className="h-10 md:h-16 aspect-square" />
             <h1 className="lg:text-xl md:text-lg">
               Adaptive Network Laboratory
             </h1>
@@ -37,6 +37,8 @@ export const NavBar = () => {
           <button
             className="min-[1080px]:hidden"
             onClick={() => setNavbar(!navbar)}
+            type="button"
+            title={navbar ? "Close" : "Open Menu"}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +67,7 @@ export const NavBar = () => {
         }`}
       >
         <ul className="w-full space-y-8 flex flex-col min-[1080px]:flex-row justify-end items-end min-[1080px]:space-x-6 min-[1080px]:space-y-0 text-lg min-[1080px]:text-base pr-7 min-[1080px]:pr-0">
-          <li className="flex gap-2 items-center">
+          <li className="flex items-center gap-2">
             <a href="#">About Us</a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +96,7 @@ export const NavBar = () => {
           <li>
             <a href="#">Research</a>
           </li>
-          <li className="flex gap-2 items-center">
+          <li className="flex items-center gap-2">
             <a href="#">Others</a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
