@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Manrope", "sans-serif"],
+      },
       colors: {
         blue: {
           main: "#13293D",
