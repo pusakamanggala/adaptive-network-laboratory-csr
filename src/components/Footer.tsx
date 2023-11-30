@@ -39,7 +39,11 @@ export const Footer = ({ eventData }: EventData) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={ytIcon} alt="" />
+                <img
+                  src={ytIcon}
+                  alt="youtube"
+                  className="h-11 aspect-square"
+                />
               </a>
             </li>
             <li>
@@ -48,7 +52,11 @@ export const Footer = ({ eventData }: EventData) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={linkedinIcon} alt="" />
+                <img
+                  src={linkedinIcon}
+                  alt="linkedin"
+                  className="h-11 aspect-square"
+                />
               </a>
             </li>
             <li>
@@ -57,7 +65,7 @@ export const Footer = ({ eventData }: EventData) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={lineIcon} alt="" />
+                <img src={lineIcon} alt="line" className="h-11 aspect-square" />
               </a>
             </li>
             <li>
@@ -66,7 +74,11 @@ export const Footer = ({ eventData }: EventData) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={igIcon} alt="" />
+                <img
+                  src={igIcon}
+                  alt="instagram"
+                  className="h-11 aspect-square"
+                />
               </a>
             </li>
           </ul>
