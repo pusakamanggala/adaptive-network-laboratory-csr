@@ -4,6 +4,9 @@ import { HeroSection } from "../components/HeroSections";
 import { useGetLandingPage } from "../hooks/useGetLandingPage";
 import { VideoProfile } from "../components/VideoProfile";
 import { LearningMaterial } from "../components/LearningMaterial";
+import { Quote } from "../components/Quote";
+import { Footer } from "../components/Footer";
+import { FrequentlyAskedQuestions } from "../components/FrequentlyAskedQuestions";
 
 type LandingPageData = {
   kegiatan: {
@@ -37,6 +40,9 @@ export type Article = LandingPageData["article"];
 // export type for event
 export type Event = LandingPageData["kegiatan"];
 
+// export type for faq
+export type FAQ = LandingPageData["faq"];
+
 export const HomePage = () => {
   const { data, isSuccess, isError } = useGetLandingPage();
 
@@ -61,6 +67,11 @@ export const HomePage = () => {
           <Events eventData={landingPageData.kegiatan} />
           <VideoProfile />
           <LearningMaterial learningMaterialData={landingPageData.article} />
+          <Quote />
+          <FrequentlyAskedQuestions
+            frequentlyAskedQuestionsData={landingPageData.faq}
+          />
+          <Footer eventData={landingPageData.kegiatan} />
         </>
       )}
     </main>
