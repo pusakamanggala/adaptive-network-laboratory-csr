@@ -1,12 +1,12 @@
 export const VideoProfile = () => {
   return (
-    <section className="mx-5 md:mx-10 lg:mx-28 xl:mx-32 space-y-10">
+    <section className="container p-5 mx-auto space-y-10">
       <div className="space-y-2 text-center md:text-start">
-        <h2 className="text-blue-3 text-2xl font-medium">
+        <h2 className="text-2xl font-medium text-blue-3">
           Adaptive Network Laboratory
         </h2>
-        <h1 className="text-blue-main text-4xl font-semibold">Video Profile</h1>
-        <p className="text-gray-500 text-lg">
+        <h1 className="text-4xl font-semibold text-blue-main">Video Profile</h1>
+        <p className="text-lg text-gray-500">
           Mau kenal lebih jauh? Tonton video dibawah ini yuk
         </p>
       </div>
@@ -14,7 +14,7 @@ export const VideoProfile = () => {
         title="YouTube Video"
         src={`https://www.youtube.com/embed/xbQWlYBBHWQ`}
         allowFullScreen
-        className="w-full md:w-3/4 2xl:w-3/5 aspect-video mx-auto rounded-2xl"
+        className="w-full mx-auto md:w-3/4 2xl:w-3/5 aspect-video rounded-2xl"
       ></iframe>
     </section>
   );

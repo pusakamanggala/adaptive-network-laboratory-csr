@@ -49,7 +49,7 @@ export const FrequentlyAskedQuestions = ({
   };
 
   return (
-    <section className="mx-5 md:mx-10 space-y-9 2xl:mx-72 xl:mx-48 lg:mx-32">
+    <section className="container p-5 mx-auto space-y-9">
       <div className="space-y-2 text-center md:text-start">
         <h2 className="text-2xl font-medium text-blue-3">
           Frequently Asked Questions
