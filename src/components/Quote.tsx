@@ -3,7 +3,7 @@ export const Quote = () => {
   return (
     <section className="pt-20">
       <div className="flex justify-center mx-5 bg-blue-main rounded-2xl">
-        <div className="flex flex-col items-center justify-end gap-3 lg:flex-row lg:h-[270px] h-[340px] xl:w-2/3 2xl:w-3/5">
+        <div className="flex container flex-col items-center justify-end gap-3 lg:flex-row lg:h-[270px] h-[340px] xl:w-2/3 2xl:w-3/5">
           <img
             src={ShofiaNaningImg}
             alt="Dr. Sofia Naning Hertiana, Ir., M.T."

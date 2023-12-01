@@ -9,11 +9,11 @@ export const LearningMaterial = ({
   learningMaterialData,
 }: LearningMaterialProps) => {
   return (
-    <section className="container p-5 mx-auto space-y-10 md:p-0">
+    <section className="container p-5 pt-0 mx-auto space-y-10 md:p-0">
       <div className="flex flex-row-reverse flex-wrap justify-center gap-3">
         <div className="flex flex-col justify-center space-y-3 text-center md:text-end w-72 lg:w-96 h-60">
-          <h2 className="text-2xl font-medium text-blue-3">Our</h2>
-          <h1 className="text-4xl font-semibold text-blue-main">
+          <h2 className="text-xl font-medium md:text-2xl text-blue-3">Our</h2>
+          <h1 className="text-3xl font-semibold md:text-4xl text-blue-main">
             Learning Material
           </h1>
           <p className="text-lg text-gray-500">

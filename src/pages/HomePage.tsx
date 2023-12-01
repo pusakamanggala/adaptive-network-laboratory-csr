@@ -5,10 +5,9 @@ import { useGetLandingPage } from "../hooks/useGetLandingPage";
 import { VideoProfile } from "../components/VideoProfile";
 import { LearningMaterial } from "../components/LearningMaterial";
 import { Quote } from "../components/Quote";
-import { Footer } from "../components/Footer";
 import { FrequentlyAskedQuestions } from "../components/FrequentlyAskedQuestions";
 
-type LandingPageData = {
+export type LandingPageData = {
   kegiatan: {
     uid: string;
     judul: string;
@@ -60,7 +59,19 @@ export const HomePage = () => {
   }, [data, isSuccess, isError]);
 
   return (
-    <main className="space-y-20">
+    <>
+      {!landingPageData &&
+        // if there is no data from api and localstorage
+        (isError ? (
+          <div className="h-[100dvh] flex items-center justify-center">
+            <h1>Error...</h1>
+          </div>
+        ) : (
+          // if landingPageData is still null
+          <div className="h-[100dvh] flex items-center justify-center">
+            <h1>Loading...</h1>
+          </div>
+        ))}
       {landingPageData && (
         <>
           <HeroSection />
@@ -71,9 +82,8 @@ export const HomePage = () => {
           <FrequentlyAskedQuestions
             frequentlyAskedQuestionsData={landingPageData.faq}
           />
-          <Footer eventData={landingPageData.kegiatan} />
         </>
       )}
-    </main>
+    </>
   );
 };
