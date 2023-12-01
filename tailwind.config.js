@@ -11,6 +11,17 @@ export default {
       },
     },
     extend: {
+      keyframes: {
+        pulse: {
+          // pulse left to right
+          "0%, 100%": {
+            transform: "translateX(0)",
+          },
+        },
+      },
+      animation: {
+        pulse: "pulse 1.2s ease-in-out infinite",
+      },
       fontFamily: {
         sans: ["Manrope", "sans-serif"],
       },

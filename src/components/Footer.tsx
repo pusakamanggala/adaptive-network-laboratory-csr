@@ -87,23 +87,25 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <h2 className="mb-2 text-xl font-bold">Events</h2>
-            <ul className="space-y-1 text-lg">
-              {landingPageData?.kegiatan.map((event) => (
-                <li key={event.uid}>
-                  <a
-                    href={event.hyperlink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    {event.judul}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {landingPageData && (
+            <div>
+              <h2 className="mb-2 text-xl font-bold">Events</h2>
+              <ul className="space-y-1 text-lg">
+                {landingPageData.kegiatan.map((event) => (
+                  <li key={event.uid}>
+                    <a
+                      href={event.hyperlink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {event.judul}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div>
             <h2 className="mb-2 text-xl font-bold">Laboratory</h2>
             <ul className="space-y-1 text-lg">
