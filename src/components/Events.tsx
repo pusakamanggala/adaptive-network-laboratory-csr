@@ -1,5 +1,5 @@
 import NetSchoolIcon from "../icons/Graph.svg";
-import { Event } from "../pages/HomePage";
+import { Event } from "../hooks/useGetLandingPage";
 
 type EventsProps = {
   eventData: Event;

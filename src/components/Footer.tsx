@@ -3,27 +3,11 @@ import linkedinIcon from "../icons/linkedin.svg";
 import lineIcon from "../icons/line.svg";
 import ytIcon from "../icons/youtube.svg";
 import igIcon from "../icons/instagram.svg";
-
 import { useGetLandingPage } from "../hooks/useGetLandingPage";
-import { useMemo } from "react";
-import { LandingPageData } from "../pages/HomePage";
 
 export const Footer = () => {
   // to get event data from homepage endpoint
-  const { data, isSuccess, isError } = useGetLandingPage();
-  // get event data from localstorage with use memo
-  const landingPageData = useMemo<LandingPageData | null>(() => {
-    if (isSuccess) {
-      // If the query is successful, use the fresh data
-      return data.data;
-    } else if (isError) {
-      // If there's an error, retrieve data from local storage
-      const localStorageData = localStorage.getItem("landingPageData");
-      return localStorageData ? JSON.parse(localStorageData) : null;
-    }
-    // Default value if the query is error and there's no data in local storage
-    return null;
-  }, [data, isSuccess, isError]);
+  const { data: landingPageData } = useGetLandingPage();
 
   return (
     <footer className="bg-[#2D2727] py-11 mt-10">

@@ -1,4 +1,4 @@
-import { FAQ } from "../pages/HomePage";
+import { FAQ } from "../hooks/useGetLandingPage";
 
 type FrequentlyAskedQuestionsData = {
   frequentlyAskedQuestionsData: FAQ;

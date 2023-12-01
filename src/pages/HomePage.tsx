@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { Events } from "../components/Events";
 import { HeroSection } from "../components/HeroSections";
 import { useGetLandingPage } from "../hooks/useGetLandingPage";
@@ -8,57 +7,8 @@ import { Quote } from "../components/Quote";
 import { FrequentlyAskedQuestions } from "../components/FrequentlyAskedQuestions";
 import ErrorImage from "../img/undraw_bug_fixing.svg";
 
-export type LandingPageData = {
-  kegiatan: {
-    uid: string;
-    judul: string;
-    descSingkat: string;
-    hyperlink: string;
-  }[];
-  article: {
-    judul: string;
-    caption: string;
-    hyperlink: string;
-  }[];
-  pembina: {
-    uid: string;
-    judul: string;
-    isi: string;
-    namaPembina: string;
-    imageUrl: string;
-  }[];
-  faq: {
-    uid: string;
-    judul: string;
-    isi: string;
-  }[];
-};
-
-// export type for article
-export type Article = LandingPageData["article"];
-
-// export type for event
-export type Event = LandingPageData["kegiatan"];
-
-// export type for faq
-export type FAQ = LandingPageData["faq"];
-
 export const HomePage = () => {
-  const { data, isSuccess, isError } = useGetLandingPage();
-
-  const landingPageData = useMemo<LandingPageData | null>(() => {
-    if (isSuccess) {
-      // If the query is successful, use the fresh data
-      return data.data;
-    } else if (isError) {
-      // If there's an error, retrieve data from local storage
-      const localStorageData = localStorage.getItem("landingPageData");
-      return localStorageData ? JSON.parse(localStorageData) : null;
-    }
-    // Default value if the query is error and there's no data in local storage
-    return null;
-  }, [data, isSuccess, isError]);
-
+  const { data: landingPageData, isError } = useGetLandingPage();
   const LoadingSkeleton = () => {
     return (
       <section className="container p-5 mx-auto space-y-20 md:space-y-0 hero-section animate-pulse">

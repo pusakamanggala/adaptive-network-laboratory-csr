@@ -1,5 +1,5 @@
 import NetSchoolIcon from "../icons/Graph.svg";
-import { Article } from "../pages/HomePage";
+import { Article } from "../hooks/useGetLandingPage";
 
 type LearningMaterialProps = {
   learningMaterialData: Article;
