@@ -19,8 +19,8 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <section
-      className={`fixed w-full z-50 ${
+    <header
+      className={`fixed w-full z-50 transition-colors duration-300 ease-in-out ${
         isScrolled && !navbar && "bg-blue-main text-white"
       } `}
     >
@@ -28,7 +28,7 @@ export const NavBar = () => {
         className={`container mx-auto ${
           navbar &&
           "h-[100dvh] min-[1080px]:h-auto bg-blue-main text-white mx-auto"
-        }   min-[1080px]:flex min-[1080px]:items-center min-[1080px]:justify-between py-3 transition-colors duration-300 ease-in-out`}
+        }   min-[1080px]:flex min-[1080px]:items-center min-[1080px]:justify-between py-3`}
       >
         <div className="min-[1080px]:flex min-[1080px]:justify-between px-4">
           <div className="flex items-center justify-between min-[1080px]:block">
@@ -124,6 +124,6 @@ export const NavBar = () => {
           </ul>
         </nav>
       </div>
-    </section>
+    </header>
   );
 };

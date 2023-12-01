@@ -1,11 +1,13 @@
 export const VideoProfile = () => {
   return (
-    <section className="container p-5 mx-auto space-y-10">
-      <div className="space-y-2 text-center md:text-start">
-        <h2 className="text-2xl font-medium text-blue-3">
+    <section className="container p-5 pb-0 mx-auto space-y-10">
+      <div className="space-y-1 text-center md:space-y-2 md:text-start">
+        <h2 className="text-xl font-medium md:text-2xl text-blue-3">
           Adaptive Network Laboratory
         </h2>
-        <h1 className="text-4xl font-semibold text-blue-main">Video Profile</h1>
+        <h1 className="text-3xl font-semibold md:text-4xl text-blue-main">
+          Video Profile
+        </h1>
         <p className="text-lg text-gray-500">
           Mau kenal lebih jauh? Tonton video dibawah ini yuk
         </p>

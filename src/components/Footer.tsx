@@ -3,15 +3,14 @@ import linkedinIcon from "../icons/linkedin.svg";
 import lineIcon from "../icons/line.svg";
 import ytIcon from "../icons/youtube.svg";
 import igIcon from "../icons/instagram.svg";
-import { Event } from "../pages/HomePage";
+import { useGetLandingPage } from "../hooks/useGetLandingPage";
 
-type EventData = {
-  eventData: Event;
-};
+export const Footer = () => {
+  // to get event data from homepage endpoint
+  const { data: landingPageData } = useGetLandingPage();
 
-export const Footer = ({ eventData }: EventData) => {
   return (
-    <footer className="bg-[#2D2727] py-11">
+    <footer className="bg-[#2D2727] py-11 mt-10">
       <div className="container p-5 mx-auto space-y-7">
         <div className="flex flex-row items-center gap-5 text-xl border-b pb-7 border-white/50">
           <img src={ANLogo} alt="" className="h-10 md:h-16 aspect-square" />
@@ -72,23 +71,25 @@ export const Footer = ({ eventData }: EventData) => {
               </li>
             </ul>
           </div>
-          <div>
-            <h2 className="mb-2 text-xl font-bold">Events</h2>
-            <ul className="space-y-1 text-lg">
-              {eventData.map((event) => (
-                <li key={event.uid}>
-                  <a
-                    href={event.hyperlink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    {event.judul}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {landingPageData && (
+            <div>
+              <h2 className="mb-2 text-xl font-bold">Events</h2>
+              <ul className="space-y-1 text-lg">
+                {landingPageData.kegiatan.map((event) => (
+                  <li key={event.uid}>
+                    <a
+                      href={event.hyperlink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {event.judul}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div>
             <h2 className="mb-2 text-xl font-bold">Laboratory</h2>
             <ul className="space-y-1 text-lg">
