@@ -70,7 +70,7 @@ export const HomePage = () => {
           <Events eventData={landingPageData.kegiatan} />
           <VideoProfile />
           <LearningMaterial learningMaterialData={landingPageData.article} />
-          <Quote />
+          <Quote quoteData={landingPageData.pembina} />
           <FrequentlyAskedQuestions
             frequentlyAskedQuestionsData={landingPageData.faq}
           />

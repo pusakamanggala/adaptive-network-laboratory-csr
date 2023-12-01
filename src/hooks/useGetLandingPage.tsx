@@ -50,6 +50,9 @@ export type Event = LandingPageData["kegiatan"];
 // export type for faq
 export type FAQ = LandingPageData["faq"];
 
+// export type for pembina
+export type Pembina = LandingPageData["pembina"];
+
 function isValidLandingPageData<T>(
   data: T | null
 ): data is T & LandingPageData {
