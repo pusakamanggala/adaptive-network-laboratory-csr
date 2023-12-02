@@ -1,4 +1,4 @@
-import { FAQ } from "../pages/HomePage";
+import { FAQ } from "../hooks/useGetLandingPage";
 
 type FrequentlyAskedQuestionsData = {
   frequentlyAskedQuestionsData: FAQ;
@@ -49,12 +49,12 @@ export const FrequentlyAskedQuestions = ({
   };
 
   return (
-    <section className="mx-5 md:mx-10 space-y-9 2xl:mx-72 xl:mx-48 lg:mx-32">
+    <section className="container p-5 pb-10 mx-auto space-y-9">
       <div className="space-y-2 text-center md:text-start">
-        <h2 className="text-2xl font-medium text-blue-3">
+        <h2 className="text-xl font-medium md:text-2xl text-blue-3">
           Frequently Asked Questions
         </h2>
-        <h1 className="text-4xl font-semibold text-blue-main">
+        <h1 className="text-3xl font-semibold md:text-4xl text-blue-main">
           Adaptive Network Laboratory
         </h1>
       </div>

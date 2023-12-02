@@ -1,5 +1,5 @@
 import NetSchoolIcon from "../icons/Graph.svg";
-import { Event } from "../pages/HomePage";
+import { Event } from "../hooks/useGetLandingPage";
 
 type EventsProps = {
   eventData: Event;
@@ -7,11 +7,15 @@ type EventsProps = {
 
 export const Events = ({ eventData }: EventsProps) => {
   return (
-    <section className="bg-blue-main md:p-20 md:mx-10 lg:mx-14 xl:mx-20 p-10 rounded-2xl">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
-        <div className="space-y-3 text-center md:text-start flex flex-col justify-center">
-          <h2 className="text-blue-3 text-2xl font-medium">Adaptive Network</h2>
-          <h1 className="text-white text-4xl font-semibold">Our Event</h1>
+    <section className="p-10 mx-5 bg-blue-main rounded-2xl md:p-14">
+      <div className="container grid p-5 mx-auto md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
+        <div className="flex flex-col justify-center space-y-1 text-center md:space-y-2 md:text-start">
+          <h2 className="text-xl font-medium md:text-2xl text-blue-3">
+            Adaptive Network
+          </h2>
+          <h1 className="text-3xl font-semibold text-white md:text-4xl">
+            Our Event
+          </h1>
           <p className="text-white">
             Cari tau kegiatan apa saja yang ada di Adaptive Network Laboratory.
           </p>
@@ -19,7 +23,7 @@ export const Events = ({ eventData }: EventsProps) => {
         {eventData.map((eventData) => (
           <div
             key={eventData.uid}
-            className="p-5 bg-white/10 rounded-lg space-y-5"
+            className="p-5 space-y-5 rounded-lg bg-white/10"
           >
             <div className="space-y-2">
               <img
@@ -27,7 +31,7 @@ export const Events = ({ eventData }: EventsProps) => {
                 alt={eventData.judul + "_icon"}
                 className="w-14 aspect-square"
               />
-              <h1 className="text-white text-xl font-medium">
+              <h1 className="text-xl font-medium text-white">
                 {eventData.judul}
               </h1>
             </div>

@@ -2,7 +2,26 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1192px",
+      },
+    },
     extend: {
+      keyframes: {
+        pulse: {
+          // pulse left to right
+          "0%, 100%": {
+            transform: "translateX(0)",
+          },
+        },
+      },
+      animation: {
+        pulse: "pulse 1.2s ease-in-out infinite",
+      },
       fontFamily: {
         sans: ["Manrope", "sans-serif"],
       },

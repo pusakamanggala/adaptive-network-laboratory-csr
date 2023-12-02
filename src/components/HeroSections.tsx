@@ -5,8 +5,8 @@ import TeamIcon from "../icons/three-user.svg";
 
 export const HeroSection = () => {
   return (
-    <section className="mx-16 hero-section 2xl:mx-72 xl:mx-48 lg:mx-32 space-y-14">
-      <div className="grid items-center pt-32 md:grid-cols-2 gap-7 md:py-40 h-[100dvh] 2xl:h-auto">
+    <section className="container p-5 mx-auto space-y-20 md:space-y-0 hero-section">
+      <div className="grid items-center pt-28 md:grid-cols-2 gap-7 md:py-40 lg:h-[100dvh] 2xl:h-auto">
         <div className="flex items-center justify-center">
           <img src={AxoHaloImg} alt="" className="w-[550px] h-auto" />
         </div>
@@ -29,7 +29,7 @@ export const HeroSection = () => {
       </div>
       <div className="flex flex-col items-center gap-8 md:flex-row">
         <div className="text-center md:text-left">
-          <h4 className="text-3xl font-semibold">Our Values</h4>
+          <h4 className="text-2xl font-semibold md:text-4xl">Our Values</h4>
           <p className="text-gray-400">
             Kami berkomitmen untuk menerapkan nilai-nilai di samping dalam
             setiap pekerjaan.
