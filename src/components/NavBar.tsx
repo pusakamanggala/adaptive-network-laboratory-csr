@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ANLogo from "../img/an-logo.svg";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -32,12 +33,12 @@ export const NavBar = () => {
       >
         <div className="min-[1080px]:flex min-[1080px]:justify-between px-4">
           <div className="flex items-center justify-between min-[1080px]:block">
-            <div className="flex items-center gap-2">
+            <Link to={"/"} className="flex items-center gap-2">
               <img src={ANLogo} alt="" className="h-10 md:h-16 aspect-square" />
               <h1 className="lg:text-xl md:text-lg line-clamp-1">
                 Adaptive Network Laboratory
               </h1>
-            </div>
+            </Link>
             <button
               className="min-[1080px]:hidden"
               onClick={() => setNavbar(!navbar)}
@@ -70,56 +71,153 @@ export const NavBar = () => {
             navbar ? "block" : "hidden"
           }`}
         >
-          <ul className="w-full space-y-8 flex flex-col min-[1080px]:flex-row justify-end items-end min-[1080px]:space-x-6 min-[1080px]:space-y-0 text-lg min-[1080px]:text-base pr-7 min-[1080px]:pr-0 ">
-            <li className="flex items-center gap-2">
-              <a href="#" className="line-clamp-1">
-                About Us
-              </a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-4 h-4"
+          <ul className="w-full space-y-8 flex flex-col min-[1080px]:flex-row justify-end items-end min-[1080px]:space-x-6 min-[1080px]:space-y-0 text-lg min-[1080px]:text-base pr-7 min-[1080px]:pr-0">
+            <li className="relative group">
+              <button
+                className="flex items-center gap-2"
+                type="button"
+                title="About"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
+                <a href="#" className="line-clamp-1">
+                  About Us
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-4 h-4 transition-all duration-200 ease-linear group-active:translate-y-1"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <ul className="absolute right-0 z-10 invisible w-48 p-3 space-y-2 transition-all rounded-md shadow-md opacity-0 text-blue-main bg-blue-4 top-10 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+                <li>
+                  <Link
+                    to="/about/profile"
+                    onClick={() => {
+                      setNavbar(false);
+                    }}
+                    className="hover:underline"
+                  >
+                    Profile
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => {
+                      setNavbar(false);
+                    }}
+                    to="/about/member"
+                    className="hover:underline"
+                  >
+                    Member
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => {
+                      setNavbar(false);
+                    }}
+                    to="/about/alumni"
+                    className="hover:underline"
+                  >
+                    Alumni
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="#">Program</a>
+              <Link
+                onClick={() => {
+                  setNavbar(false);
+                }}
+                to="/program"
+                className="hover:underline"
+              >
+                Program
+              </Link>
             </li>
             <li>
-              <a href="#" className="line-clamp-1">
+              <Link
+                onClick={() => {
+                  setNavbar(false);
+                }}
+                to="/borrow-item"
+                className="hover:underline"
+              >
                 Borrow item
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">Practicum</a>
-            </li>
-            <li>
-              <a href="#">Research</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <a href="#">Others</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-4 h-4"
+              <Link
+                onClick={() => {
+                  setNavbar(false);
+                }}
+                to="/practicum"
+                className="hover:underline"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
+                Practicum
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => {
+                  setNavbar(false);
+                }}
+                to="/research"
+                className="hover:underline"
+              >
+                Research
+              </Link>
+            </li>
+            <li className="relative group">
+              <button className="flex items-center gap-2">
+                <a href="#">Others</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <ul className="absolute right-0 z-10 invisible w-48 p-3 space-y-2 transition-all rounded-md shadow-md opacity-0 text-blue-main bg-blue-4 top-10 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+                <li>
+                  <Link
+                    onClick={() => {
+                      setNavbar(false);
+                    }}
+                    to="/login"
+                    className="hover:underline"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => {
+                      setNavbar(false);
+                    }}
+                    to="/certificate-verification"
+                    className="hover:underline"
+                  >
+                    Verifikasi sertifikat
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
