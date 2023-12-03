@@ -9,7 +9,7 @@ export const PageLayout = ({ children }: PageLayoutProps) => {
   return (
     <>
       <NavBar />
-      <main className="space-y-10 md:space-y-20 max-w-[1512px] mx-auto">
+      <main className="space-y-10 md:space-y-20 max-w-[1512px] mx-auto md:py-40 py-20">
         {children}
       </main>
       <Footer />

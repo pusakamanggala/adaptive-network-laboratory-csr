@@ -10,7 +10,7 @@ export const Footer = () => {
   const { data: landingPageData } = useGetLandingPage();
 
   return (
-    <footer className="bg-[#2D2727] py-11 mt-10">
+    <footer className="bg-[#2D2727] py-11">
       <div className="container p-5 mx-auto space-y-7">
         <div className="flex flex-row items-center gap-5 text-xl border-b pb-7 border-white/50">
           <img src={ANLogo} alt="" className="h-10 md:h-16 aspect-square" />
