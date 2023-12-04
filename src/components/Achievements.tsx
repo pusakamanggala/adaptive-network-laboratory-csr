@@ -86,11 +86,10 @@ export const Achievements = () => {
       </div>
       <Carousel>
         {carouselDummyData &&
-          carouselDummyData.map((carousel) => (
+          carouselDummyData.map((carousel, index) => (
             <div
-              className={`flex-shrink-0 h-full overflow-hidden rounded slide snap-center ${
-                carousel.desc && carousel.title && "w-[900px]"
-              } `}
+              key={index}
+              className="flex-shrink-0 h-full overflow-hidden rounded slide snap-center w-[900px]"
             >
               <div className="flex h-full">
                 <article className="space-y-4">
@@ -99,7 +98,6 @@ export const Achievements = () => {
                   </h1>
                   <p>{carousel.desc}</p>
                 </article>
-
                 <img
                   className="object-cover w-2/3 h-full rounded-xl"
                   src={carousel.imageUrl}

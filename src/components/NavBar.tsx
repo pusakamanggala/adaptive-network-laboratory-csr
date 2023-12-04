@@ -78,9 +78,7 @@ export const NavBar = () => {
                 type="button"
                 title="About"
               >
-                <a href="#" className="line-clamp-1">
-                  About Us
-                </a>
+                <p>About Us</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -177,8 +175,12 @@ export const NavBar = () => {
               </Link>
             </li>
             <li className="relative group">
-              <button className="flex items-center gap-2">
-                <a href="#">Others</a>
+              <button
+                className="flex items-center gap-2"
+                type="button"
+                title="Others"
+              >
+                <p>Others</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

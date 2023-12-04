@@ -83,15 +83,13 @@ export const AboutUs = () => {
           carouselDummyDataImageOnly.map((carousel, index) => (
             <div
               key={index}
-              className="flex-shrink-0 h-full overflow-hidden rounded slide snap-center"
+              className="flex-shrink-0 w-auto h-full overflow-hidden rounded slide snap-center"
             >
-              <div className="flex h-full">
-                <img
-                  className="object-cover h-full rounded-xl"
-                  src={carousel.imageUrl}
-                  alt={"image_" + index + 1}
-                />
-              </div>
+              <img
+                className="object-cover h-full rounded-xl"
+                src={carousel.imageUrl}
+                alt={"image_" + index + 1}
+              />
             </div>
           ))}
       </Carousel>
